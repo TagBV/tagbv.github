@@ -3,7 +3,7 @@ head
   title my-site #{title}
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1')
-  link(rel='icon', type='image/png', href='images/icons/favicon.png')
+  link(rel='icon', type='image/png', href='client/images/icons/favicon.png')
   link(rel='stylesheet', type='text/css', href='client/vendor/bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet', type='text/css', href='client/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet', type='text/css', href='client/fonts/iconic/css/material-design-iconic-font.min.css')
@@ -34,14 +34,14 @@ body(class="animsition")
     dropdownParent: $(this).next('.dropDownSelect2')
     });
     })
-  script(src='vendor/daterangepicker/moment.min.js')
-  script(src='vendor/daterangepicker/daterangepicker.js')
-  script(src='vendor/slick/slick.min.js')
-  script(src='js/slick-custom.js')
-  script(src='vendor/parallax100/parallax100.js')
+  script(src='client/vendor/daterangepicker/moment.min.js')
+  script(src='client/vendor/daterangepicker/daterangepicker.js')
+  script(src='client/vendor/slick/slick.min.js')
+  script(src='client/js/slick-custom.js')
+  script(src='client/vendor/parallax100/parallax100.js')
   script.
     $('.parallax100').parallax100();
-  script(src='vendor/MagnificPopup/jquery.magnific-popup.min.js')
+  script(src='client/vendor/MagnificPopup/jquery.magnific-popup.min.js')
   script.
     $('.gallery-lb').each(function () { // the containers for all your galleries
     $(this).magnificPopup({
@@ -53,8 +53,8 @@ body(class="animsition")
     mainClass: 'mfp-fade'
     });
     });
-  script(src='vendor/isotope/isotope.pkgd.min.js')
-  script(src='vendor/sweetalert/sweetalert.min.js')
+  script(src='client/vendor/isotope/isotope.pkgd.min.js')
+  script(src='client/vendor/sweetalert/sweetalert.min.js')
   script.
     $('.js-addwish-b2').on('click', function (e) {
     e.preventDefault();
@@ -96,7 +96,7 @@ body(class="animsition")
     ps.update();
     })
     });
-  script(src='js/main.js')
+  script(src='client/js/main.js')
   script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')
   script.
     window.dataLayer = window.dataLayer || [];

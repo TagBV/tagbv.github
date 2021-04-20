@@ -1,0 +1,175 @@
+{
+  "category": [
+    {
+      "name": "Áo Sơ Mi",
+      "id": 1
+    },
+    {
+      "name": "Áo Polo",
+      "id": 2
+    },
+    {
+      "name": "Áo Khoác",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "PORTOFINO LINEN SHIRT - DARK GREEN",
+      "cate_id": 1,
+      "price": "340.000 VND",
+      "details": "Áo Sơ Mi Đẹp",
+      "images": ""
+    },
+    {
+      "id": 2,
+      "name": "PLAID FLANNEL SHIRT - BLUE CARO",
+      "cate_id": 1,
+      "price": "320.000 VND",
+      "details": "Áo Sơ Mi Plaid Flannel Khoác Ngoài",
+      "images": ""
+    },
+    {
+      "id": 3,
+      "name": "SƠ MI LINEN CỔ TRỤ CÓ TÚI - XÁM",
+      "cate_id": 1,
+      "price": "320.000 VND",
+      "details": "Mềm mại, độ bền cao, hút ẩm và thấm hút mồ hôi tốt",
+      "images": ""
+    },
+    {
+      "id": 4,
+      "name": "SƠ MI LINEN CỔ TRỤ CÓ TÚI - ĐEN",
+      "cate_id": 1,
+      "price": "320.000 VND",
+      "details": "Áo Sơ Mi Dành Cho Những Buổi Hẹn Hò",
+      "images": ""
+    },
+    {
+      "id": 5,
+      "name": "SƠ MI LINEN CỔ TRỤ CÓ TÚI - ĐỎ",
+      "cate_id": 1,
+      "price": "320.000 VND",
+      "details": "Áo Sơ Mi Đẹp Dành Cho Nam",
+      "images": ""
+    },
+    {
+      "id": 6,
+      "name": "MIX COLOR POLO SHIRT - RED & BLUE",
+      "cate_id": 2,
+      "price": "280.000 VND",
+      "details": "Thun cao cấp co giãn, mềm mịn",
+      "images": ""
+    },
+    {
+      "id": 7,
+      "name": "WEAVE POLO SHIRT - PINK PASTEL",
+      "cate_id": 2,
+      "price": "290.000 VND",
+      "details": "Áo Polo Dành Cho Nam ",
+      "images": ""
+    },
+    {
+      "id": 8,
+      "name": "TIPPED POLO SHIRT - BLACK",
+      "cate_id": 2,
+      "price": "350.000 VND",
+      "details": "Mềm mại, độ bền cao, hút ẩm và thấm hút mồ hôi tốt",
+      "images": ""
+    },
+    {
+      "id": 9,
+      "name": "SLIM FIT POLO SHIRT - NAVY BLUE",
+      "cate_id": 2,
+      "price": "330.000 VND",
+      "details": "Chất liệu co giãn và mềm mại giúp bạn thoải mái",
+      "images": ""
+    },
+    {
+      "id": 10,
+      "name": "PIMA POLO SHIRT - WHITE",
+      "cate_id": 2,
+      "price": "350.000 VND",
+      "details": "Chất liệu co giãn thoải mái và thấm mồ hôi tốt",
+      "images": ""
+    },
+    {
+      "id": 11,
+      "name": "DENIM JACKET - LIGHT BLUE",
+      "cate_id": 3,
+      "price": "580.000 VND",
+      "details": "Dáng áo đứng form tạo nên vẻ trẻ trung, phong cách, vừa giữ ấm tốt, vừa tránh nắng kỹ",
+      "images": ""
+    },
+    {
+      "id": 12,
+      "name": "SPORT JACKET MUSLAND - NAVY BLUE",
+      "cate_id": 3,
+      "price": "350.000 VND",
+      "details": " Dáng áo đứng form cùng thiết kế tiện lợi, nhiều túi",
+      "images": ""
+    },
+    {
+      "id": 13,
+      "name": "DENIM JACKET - MIDNIGHT BLUE",
+      "cate_id": 3,
+      "price": "630.000 VND",
+      "details": "Dáng áo đứng form tạo nên vẻ trẻ trung, phong cách",
+      "images": ""
+    },
+    {
+      "id": 14,
+      "name": "SPORT JACKET MUSLAND - GRAY",
+      "cate_id": 3,
+      "price": "350.000 VND",
+      "details": "Cổ bẻ tránh gió và gam màu dễ phối đồ.",
+      "images": ""
+    },
+    {
+      "id": 15,
+      "name": "DENIM JACKET - JUST GREY",
+      "cate_id": 3,
+      "price": "600.000 VND",
+      "details": "Dáng áo đứng form tạo nên vẻ trẻ trung, phong cách",
+      "images": ""
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer_name": "Duy Mai",
+      "customer_address": "123 LTT",
+      "customer_email": "sktcloser1411@gmail.com",
+      "customer_phone_number": "0935452701",
+      "created_date": "29/03/2021",
+      "status": ""
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quanlity": "",
+      "unit_price": "VND"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "name ne",
+      "price": 100,
+      "quantity": 1,
+      "image": "sr",
+      "total": 100
+    },
+    {
+      "id": 2,
+      "name": "name ne",
+      "price": 100,
+      "quantity": 1,
+      "image": "sr",
+      "total": 100
+    }
+  ]
+}

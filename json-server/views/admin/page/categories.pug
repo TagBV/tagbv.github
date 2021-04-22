@@ -1,0 +1,58 @@
+extends ../layout/common.pug
+block content
+  #wrapper
+    include ../components/navLeft.pug
+    #content-wrapper.d-flex.flex-column
+      #content
+        include ../components/navTop.pug
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              form(action="/admin/categories", method="POSt")
+                .modal-header
+                  h5#exampleModalLabel.modal-title Create category
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                    .form-group
+                      label(for='categoryname') Category name
+                      input#categoryname.form-control(type='text', name="name" aria-describedby='name', placeholder='Enter name')
+                      small#name.form-text.text-muted We&apos;ll never share your category name with anyone else.
+                .modal-footer
+                  button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='submit') create
+        .container-fluid
+          h1.h3.mb-2.text-gray-800 Tables Categories
+          p.mb-4
+            | DataTables is a third party plugin that is used to generate the demo table below.
+            | For more information about DataTables, please visit the 
+            a(target='_blank', href='https://datatables.net') official DataTables documentation
+            | .
+          button.btn.btn-primary.mb-3(data-toggle="modal" data-target="#exampleModal") Create Category
+          .card.shadow.mb-4
+            .card-header.py-3
+              h6.m-0.font-weight-bold.text-primary DataTables Example
+            .card-body
+              .table-responsive
+                table#dataTable.table.table-bordered(width='100%', cellspacing='0')
+                  thead
+                    tr
+                      th ID
+                      th Name 
+                      th Changes
+                  tfoot
+                  tbody
+                    each value, index in categories.length ? categories : ""
+                      tr
+                        td #{index + 1}
+                        td #{value.name}
+                        td 
+                          a(href=`/admin/categories/delete/${value.id}/${value.name}`)
+                            button(class="btn btn-primary btn-sm mr-2") update
+                          a(href=`http://localhost:8000/admin/categories/delete/${value.id}`)
+                            button.btn.btn-danger.btn-sm(type="submit") delete
+      include ../components/footer.pug
+block script 
+  script(src='/assets_admin/vendor/datatables/jquery.dataTables.min.js')
+  script(src='/assets_admin/vendor/datatables/dataTables.bootstrap4.min.js')
+  script(src='/assets_admin/js/demo/datatables-demo.js')

@@ -4,7 +4,10 @@ block content
     include ../components/cart.pug
     include ../components/slider.pug
     include ../components/banners/bannerHome.pug
-    include ../components/products/listItem.pug
+    section.bg0.p-t-23.p-b-140
+      .container
+        include ../components/products/productOverview.pug
+        include ../components/products/listItem.pug
 block footer 
     include ../components/footer.pug
     include ../components/scroll.pug

@@ -1,0 +1,82 @@
+extends ../layout/common.pug
+block content
+  #wrapper
+    include ../components/navLeft.pug
+    #content-wrapper.d-flex.flex-column
+      #content
+        include ../components/navTop.pug
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              form(action="/admin/products", method="get")
+                .modal-header
+                  h5#exampleModalLabel.modal-title Create category
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                    .form-group
+                      label(for='name') Name
+                      input#title.form-control(type='text', name="name" aria-describedby='name', placeholder='Enter name')
+                      small#name.form-text.text-muted We&apos;ll never share your name with anyone else.
+                    .form-group
+                      label(for='name') Categories
+                      select.form-control(name="category_id")
+                        each value in categories.length ? categories : []
+                          option(value=`${value.id}`) #{value.name}
+                      small#name.form-text.text-muted We&apos;ll never share your name with anyone else.
+                    .form-group
+                      label(for='file') Image
+                      input.form-control-file.border(type='file', name="image" aria-describedby='name')
+                      small#file.form-text.text-muted We&apos;ll never share your image with anyone else.
+                    .form-group
+                      label(for='price') Price
+                      input#title.form-control(type='text', name="price" aria-describedby='name', placeholder='Enter price')
+                      small#price.form-text.text-muted We&apos;ll never share your price with anyone else.
+                    .form-group
+                      label(for='details') Details
+                      textarea#details.form-control(rows='3', name="desc")
+                      small#details.form-text.text-muted We&apos;ll never share your details with anyone else.
+                .modal-footer
+                  button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='submit') create
+        .container-fluid
+          h1.h3.mb-2.text-gray-800 Tables Products
+          p.mb-4
+            | DataTables is a third party plugin that is used to generate the demo table below.
+            | For more information about DataTables, please visit the 
+            a(target='_blank', href='https://datatables.net') official DataTables documentation
+            | .
+          button.btn.btn-primary.mb-3(data-toggle="modal" data-target="#exampleModal") Create Product
+          .card.shadow.mb-4
+            .card-header.py-3
+              h6.m-0.font-weight-bold.text-primary DataTables Example
+            .card-body
+              .table-responsive
+                table#dataTable.table.table-bordered(width='100%', cellspacing='0')
+                  thead
+                    tr
+                      th ID
+                      th Name 
+                      th Category ID
+                      th price 
+                      th details
+                      th images 
+                      th Changes
+                  tfoot
+                  tbody
+                    each value in products.length ? products : ""
+                      tr
+                        td #{value.id}
+                        td #{value.name}
+                        td #{value.cate_id}
+                        td #{value.price}
+                        td #{value.details}
+                        td #{value.images}
+                        td 
+                          button(class="btn btn-primary btn-sm mr-2") update
+                          button(class="btn btn-danger btn-sm") delete
+      include ../components/footer.pug
+block script 
+  script(src='/assets_admin/vendor/datatables/jquery.dataTables.min.js')
+  script(src='/assets_admin/vendor/datatables/dataTables.bootstrap4.min.js')
+  script(src='/assets_admin/js/demo/datatables-demo.js')

@@ -1,0 +1,10 @@
+extends ../layout/header.pug
+block content 
+    include ../components/navbar.pug
+    include ../components/cart.pug
+    .bg0.p-t-23.p-b-140
+      .container
+        include ../components/products/listItem.pug
+block footer 
+    include ../components/footer.pug
+    include ../components/scroll.pug

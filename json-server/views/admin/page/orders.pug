@@ -1,0 +1,54 @@
+extends ../layout/common.pug
+block content
+  #wrapper
+    include ../components/navLeft.pug
+    #content-wrapper.d-flex.flex-column
+      #content
+        include ../components/navTop.pug
+        .container-fluid
+          h1.h3.mb-2.text-gray-800 Tables
+          p.mb-4
+            | DataTables is a third party plugin that is used to generate the demo table below.
+            | For more information about DataTables, please visit the 
+            a(target='_blank', href='https://datatables.net') official DataTables documentation
+            | .
+          button(class="btn btn-primary mb-3") create order
+          .card.shadow.mb-4
+            .card-header.py-3
+              h6.m-0.font-weight-bold.text-primary DataTables Example
+            .card-body
+              .table-responsive
+                table#dataTable.table.table-bordered(width='100%', cellspacing='0')
+                  thead
+                    tr
+                      th ID
+                      th Name 
+                      th Adress 
+                      th Email 
+                      th Phone
+                      th Date 
+                      th Status 
+                      th Changes
+                  tfoot
+                  tbody
+                    each value in orders.length ? orders : ""
+                      tr
+                        td #{value.id}
+                        td #{value.customer_name}
+                        td #{value.customer_address}
+                        td #{value.customer_email}
+                        td 0#{new Number(value.customer_phone_number).toLocaleString("fi-FI")}
+                        td #{value.created_date}
+                        td 
+                          if(value.status === "active") 
+                            button(class="btn btn-success btn-sm") #{value.status}
+                          else 
+                            button(class="btn btn-danger btn-sm") #{value.status}
+                        td 
+                          button(class="btn btn-primary btn-sm mr-2") update
+                          button(class="btn btn-danger btn-sm") delete
+      include ../components/footer.pug
+block script 
+  script(src='/assets_admin/vendor/datatables/jquery.dataTables.min.js')
+  script(src='/assets_admin/vendor/datatables/dataTables.bootstrap4.min.js')
+  script(src='/assets_admin/js/demo/datatables-demo.js')

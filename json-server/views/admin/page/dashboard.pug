@@ -1,6 +1,9 @@
 extends ../layout/common.pug
 block content
-    #wrapper
-        include ../components/navbar.pug
-        include ../components/ff.pug
-            include ../components/footer.pug
+  #wrapper
+    include ../components/navLeft.pug
+    #content-wrapper.d-flex.flex-column
+      #content
+        include ../components/navTop.pug
+        include ../components/totalCharts.pug
+      include ../components/footer.pug
